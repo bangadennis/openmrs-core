@@ -20,10 +20,12 @@
 	xmlns:spring="http://www.springframework.org/tags"
 	xmlns:openmrs="urn:jsptld:/WEB-INF/taglibs/openmrs.tld">
 	<head>
-		<openmrs:htmlInclude file="/openmrs.js" />
+	 	<openmrs:htmlInclude file="/openmrs.js" />
+		<openmrs:htmlInclude file="/bootstrap/js/bootstrap.min.js" />
 		<openmrs:htmlInclude file="/scripts/openmrsmessages.js" appendLocale="true" />
-		<openmrs:htmlInclude file="/bootstrap.min.css" />
+		<openmrs:htmlInclude file="/bootstrap/css/bootstrap.min.css" />
 		<openmrs:htmlInclude file="/openmrs.css" />
+		<openmrs:htmlInclude file="/bootstrap/js/bootstrap.min.js" />
 		<link href="<openmrs:contextPath/><spring:theme code='stylesheet' />" type="text/css" rel="stylesheet" />
 		<openmrs:htmlInclude file="/style.css" />
 

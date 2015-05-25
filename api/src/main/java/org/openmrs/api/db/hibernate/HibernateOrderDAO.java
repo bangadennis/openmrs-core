@@ -189,8 +189,8 @@ public class HibernateOrderDAO implements OrderDAO {
 		String sql = "SELECT patient_id, care_setting, concept_id FROM orders WHERE order_id = :orderId";
 		
 		if (isOrderADrugOrder) {
-			sql = " SELECT o.patient_id, o.care_setting, o.concept_id, d.drug_inventory_id " + 
-				  " FROM orders o, drug_order d WHERE o.order_id = d.order_id AND o.order_id = :orderId";
+			sql = " SELECT o.patient_id, o.care_setting, o.concept_id, d.drug_inventory_id "
+			        + " FROM orders o, drug_order d WHERE o.order_id = d.order_id AND o.order_id = :orderId";
 		}
 		Query query = sessionFactory.getCurrentSession().createSQLQuery(sql);
 		query.setParameter("orderId", order.getOrderId());

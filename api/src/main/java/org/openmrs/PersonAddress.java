@@ -72,6 +72,9 @@ public class PersonAddress extends BaseOpenmrsData implements java.io.Serializab
 	
 	private Date endDate;
 	
+	//phone Number
+	private String phoneNumber;
+	
 	// Constructors
 	
 	/** default constructor */
@@ -90,7 +93,7 @@ public class PersonAddress extends BaseOpenmrsData implements java.io.Serializab
 		return new StringBuilder().append("a1:").append(getAddress1()).append(", a2:").append(getAddress2()).append(", cv:")
 		        .append(getCityVillage()).append(", sp:").append(getStateProvince()).append(", c:").append(getCountry())
 		        .append(", cd:").append(getCountyDistrict()).append(", nc:").append(getAddress3()).append(", pc:").append(
-		            getPostalCode()).append(", lat:").append(getLatitude()).append(", long:").append(getLongitude())
+		            getPostalCode()).append(", lat:").append(getLatitude()).append(", long:").append(getLongitude()).append(", ph").append(getPhoneNumber())
 		        .toString();
 	}
 	
@@ -106,7 +109,7 @@ public class PersonAddress extends BaseOpenmrsData implements java.io.Serializab
 	@SuppressWarnings("unchecked")
 	public boolean equalsContent(PersonAddress otherAddress) {
 		return new EqualsBuilder().append(defaultString(otherAddress.getAddress1()), defaultString(address1)).append(
-		    defaultString(otherAddress.getAddress2()), defaultString(address2)).append(
+				defaultString(otherAddress.getAddress2()), defaultString(address2)).append(
 		    defaultString(otherAddress.getAddress3()), defaultString(address3)).append(
 		    defaultString(otherAddress.getAddress4()), defaultString(address4)).append(
 		    defaultString(otherAddress.getAddress5()), defaultString(address5)).append(
@@ -115,6 +118,7 @@ public class PersonAddress extends BaseOpenmrsData implements java.io.Serializab
 		    defaultString(otherAddress.getCountyDistrict()), defaultString(countyDistrict)).append(
 		    defaultString(otherAddress.getStateProvince()), defaultString(stateProvince)).append(
 		    defaultString(otherAddress.getCountry()), defaultString(country)).append(
+				defaultString(otherAddress.getPhoneNumber()), defaultString(phoneNumber)).append(
 		    defaultString(otherAddress.getPostalCode()), defaultString(postalCode)).append(
 		    defaultString(otherAddress.getLatitude()), defaultString(latitude)).append(
 		    defaultString(otherAddress.getLongitude()), defaultString(longitude)).append(otherAddress.getStartDate(),
@@ -200,6 +204,19 @@ public class PersonAddress extends BaseOpenmrsData implements java.io.Serializab
 	public void setCountry(String country) {
 		this.country = country;
 	}
+	
+	//added phone number field in the address
+	@Element(data = true, required = false)
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	
+	@Element(data = true, required = false)
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	
+	//	end of phone number
 	
 	/**
 	 * @return Returns the preferred.
