@@ -66,4 +66,11 @@ public interface Address {
 	public String getLongitude();
 	
 	public void setLongitude(String longitude);
+
+	//added methods
+	public  String  getPhoneNumber();
+
+	public void setPhoneNumber(String phoneNumber);
+
+
 }
