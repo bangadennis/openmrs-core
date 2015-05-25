@@ -83,6 +83,13 @@ public class Person extends BaseOpenmrsData implements java.io.Serializable {
 	private String personVoidReason;
 	
 	private boolean isPatient;
+
+	// phone Number field @Banga Dennis
+	private String phoneNumber;
+
+
+
+
 	
 	/**
 	 * Convenience map from PersonAttributeType.name to PersonAttribute.<br/>
@@ -126,6 +133,9 @@ public class Person extends BaseOpenmrsData implements java.io.Serializable {
 		dead = person.isDead();
 		deathDate = person.getDeathDate();
 		causeOfDeath = person.getCauseOfDeath();
+
+		//phone Number field @banga
+		phoneNumber=person.getPhoneNumber();
 		
 		// base creator/voidedBy/changedBy info is not copied here
 		// because that is specific to and will be recreated
@@ -349,7 +359,16 @@ public class Person extends BaseOpenmrsData implements java.io.Serializable {
 		}
 		return this.attributes;
 	}
-	
+
+	//Getter and setter for Phone Number field
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
 	/**
 	 * Returns only the non-voided attributes for this person
 	 * 
