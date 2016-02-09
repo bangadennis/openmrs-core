@@ -18,6 +18,8 @@
 	<head>
 		<openmrs:htmlInclude file="/openmrs.js" />
 		<openmrs:htmlInclude file="/scripts/openmrsmessages.js" appendLocale="true" />
+		<openmrs:htmlInclude file="/bootstrap/css/bootstrap.min.css" />
+		<openmrs:htmlInclude file="/font-awesome/css/font-awesome.min.css" />
 		<openmrs:htmlInclude file="/openmrs.css" />
 		<link href="<openmrs:contextPath/><spring:theme code='stylesheet' />" type="text/css" rel="stylesheet" />
 		<openmrs:htmlInclude file="/style.css" />
